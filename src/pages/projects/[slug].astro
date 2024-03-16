@@ -3,7 +3,7 @@ import { getCollection, getEntry, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../Layouts/BaseLayout.astro";
 import Icon from "../../components/Icon.astro";
 import { Image } from "astro:assets";
-import ProjectDummyImage from "../../content/project Dummy.png";
+
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -21,7 +21,7 @@ type Props = {
 const {
   project,
   project: {
-    data: { isDraft, name, image, ghLink, liveLink },
+    data: { isDraft, name, ghLink },
   },
 } = Astro.props;
 const { Content } = await project.render();
@@ -30,7 +30,6 @@ const { Content } = await project.render();
 <BaseLayout
   title={project.data.name}
   description={project.data.description}
-  image={`https://og.anit.dev/og?title=${name.trim()}&type=project`}
 >
   <button
     slot="extra-header"
@@ -52,12 +51,7 @@ const { Content } = await project.render();
     )
   }
   <figure class="w-full overflow-hidden">
-    <Image
-      transition:name={"/projects/" + project.slug.trim() + "image"}
-      class="object-cover aspect-video rounded"
-      src={!!image ? image : ProjectDummyImage}
-      alt={`${name} cover image`}
-    />
+
   </figure>
   <div
     class="links flex w-full no-underline justify-end gap-2 text-xs sm:text-sm mb-4"
@@ -75,19 +69,7 @@ const { Content } = await project.render();
         </a>
       )
     }
-    {
-      liveLink && (
-        <a
-          href={liveLink}
-          target="_blank"
-          referrerpolicy="no-referrer"
-          class="flex items-center gap-1 no-underline bg-stone-200 rounded px-1 text-black outline-1 outline"
-        >
-          <Icon name="mdi:open-in-new" />
-          Live Site
-        </a>
-      )
-    }
+    
   </div>
   <h1 transition:name={"/projects/" + project.slug + "heading"}>
     {project.data.name}
