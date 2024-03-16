@@ -12,22 +12,12 @@ const {
 
 <a href={`/blog/${other.slug}`} class="no-underline group" rel="prefetch">
   <article
-    class="shadow px-3 py-2 bg-rose-50/50 dark:bg-neutral-900/60 rounded flex flex-col sm:flex-row gap-6 items-center sm:items-start my-4 border-b border-b-sky-500"
+    class="shadow px-3 py-2 bg-purple-50/50 dark:bg-neutral-900/60 rounded flex flex-col sm:flex-row gap-6 items-center sm:items-start my-4 border-b border-purple-500"
   >
-    <figure
-      class="rounded aspect-video w-full sm:basis-60 flex-grow-0 flex-shrink-0 my-0 max-w-sm overflow-hidden"
-    >
-      <Image
-        loading={"lazy"}
-        transition:name={other.slug.trim() + "image"}
-        class="object-cover aspect-video rounded"
-        src={!!image ? image : BlogImageDummy}
-        alt={`${title} cover image`}
-      />
-    </figure>
+
     <div class="">
       <h2
-        class="!text-lg font-medium my-0 group-hover:text-sky-500 duration-200"
+        class="!text-lg font-medium my-0 group-hover:text-purple-500 duration-200"
         transition:name={other.slug + "heading"}
       >
         {title}

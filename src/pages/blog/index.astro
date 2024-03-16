@@ -23,28 +23,11 @@ const allBlogPosts = (await getCollection("blog"))
 ---
 
 <BaseLayout
-  title="Blog • Anit"
-  description="Anit's technical blogs and development insights.I write about what I code"
-  image="https://og.anit.dev/og?title=Technical Wrtings&type=blogs"
+  title="Blog • Salma"
+  description="Not sure what I'll do here just yet"
 >
-  <h1 class="text-2xl mb-6 mt-4 inline-block">read my blogs 👇🏻</h1>
+  <h1 class="text-2xl mb-6 mt-4 inline-block">Not sure what I'll do here yet..</h1>
   {
-    // allBlogPosts.map((post) => {
-    //   return (
-    //     <div class="dark:border-b-gray-800 border-b-gray-300  border-b">
-    //       <h3 transition:name={post.slug} class="text-lg ">
-    //         <a
-    //           class="no-underline hover:text-gray-500 dark:hover:text-gray-400 duration-300"
-    //           href={`/blog/${post.slug}`}
-    //         >
-    //           {post.data.title}
-    //         </a>
-    //       </h3>
-    //       <p>{post.data.description}</p>
-    //       <small>Date: {formattedDate(post.data.date)}</small>
-    //     </div>
-    //   );
-    // })
     allBlogPosts.map((post) => {
       return <BlogPreview {...post} />;
     })
