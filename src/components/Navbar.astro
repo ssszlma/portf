@@ -13,10 +13,6 @@ let NavItems: NavItemProps[] = [
     displayName: "blog",
     slug: "/blog",
   },
-  // {
-  //   displayName: "guestbook",
-  //   slug: "/guestbook",
-  // },
   {
     displayName: "projects",
     slug: "/projects",
@@ -24,10 +20,7 @@ let NavItems: NavItemProps[] = [
 ];
 ---
 
-<nav
-  class="w-full py-2 my-12 tracking-tight text-gray-800 dark:text-gray-500 flex items-center"
-  transition:animate="none"
->
+<nav class="w-full py-2 my-12 tracking-tight text-gray-800 dark:text-gray-500 flex items-center" transition:animate="none">
   <Icon name="logo" class="mr-2 fill-black dark:fill-white" />
   <ul class="flex">
     {NavItems.map((item) => <Navlink {...item} />)}
