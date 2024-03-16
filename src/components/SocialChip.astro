@@ -1,7 +1,7 @@
 ---
 import Icon from "./Icon.astro";
 type Props = {
-  socialMedia: "insta" | "linkedin" | "twitter" | "github";
+  socialMedia: "insta" | "linkedin" | "github";
 };
 const { socialMedia } = Astro.props;
 let socialDetails = {
@@ -12,30 +12,26 @@ let socialDetails = {
 };
 switch (socialMedia) {
   case "insta":
-    socialDetails.url = "https://instagram.com/anitjhaaa";
-    socialDetails.handle = "@anitjhaaa";
+    socialDetails.url = "https://instagram.com/ssszlma";
+    socialDetails.handle = "@ssszlma";
     socialDetails.iconName = "mdi:instagram";
     socialDetails.accent = "shadow-pink-400 dark:shadow-pink-400/60";
     break;
+
   case "linkedin":
-    socialDetails.url = "https://linkedin.com/in/anitjha";
-    socialDetails.handle = "@anitjha";
+    socialDetails.url = "https://linkedin.com/in/salmaaj";
+    socialDetails.handle = "@salmaaj";
     socialDetails.iconName = "logos:linkedin-icon";
     socialDetails.accent = "shadow-blue-400 dark:shadow-blue-400/60 ";
-
     break;
+
   case "github":
-    socialDetails.url = "https://github.com/anitkrjha";
-    socialDetails.handle = "@anikrjha";
+    socialDetails.url = "https://github.com/ssszlma";
+    socialDetails.handle = "@ssszlma";
     socialDetails.iconName = "mdi:github";
     socialDetails.accent = "shadow-gray-400 dark:shadow-gray-400/60";
     break;
-  case "twitter":
-    socialDetails.url = "https://twitter.com/_anitjha";
-    socialDetails.handle = "@_anitjha";
-    socialDetails.iconName = "logos:twitter";
-    socialDetails.accent = "shadow-sky-300 dark:shadow-sky-400/60";
-    break;
+
 
   default:
     break;

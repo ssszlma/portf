@@ -16,7 +16,7 @@ export default defineConfig({
       "og.anit.dev",
     ],
   },
-  site: "https://anit.dev",
+  site: "https://salmaj.me/",
   integrations: [tailwind(), sitemap(), mdx(), prefetch()],
   adapter: vercel({
     analytics: true,
