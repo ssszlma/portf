@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { formattedDate } from "../lib/utils";
-import BlogImageDummy from "../content/blog_dummy.png";
+
 type Props = CollectionEntry<"blog">;
 const {
-  data: { date, description, image, isDraft, tags, title },
+  data: { date, description, isDraft, tags, title },
   ...other
 } = Astro.props;
 ---
