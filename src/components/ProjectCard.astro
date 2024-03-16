@@ -18,11 +18,11 @@ const {
 <div>
   <a
     href={blogLink}
-    class=` border-t no-underline  bg-neutral-100/50 dark:bg-neutral-900/60 rounded-t flex flex-col items-start justify-between px-3 py-2 w-full my-2 group border-rose-500 `
+    class=` border-t no-underline  bg-neutral-100/50 dark:bg-neutral-900/60 rounded-t flex flex-col items-start justify-between px-3 py-2 w-full my-2 group border-purple-500 `
     rel="prefetch"
   >
     <h3
-      class="!text-base capitalize flex gap-1 items-center mt-2 w-full justify-between group-hover:text-rose-500 duration-200"
+      class="!text-base capitalize flex gap-1 items-center mt-2 w-full justify-between group-hover:text-purple-500 duration-200"
     >
       {props.title}
       <svg
@@ -35,7 +35,9 @@ const {
       >
         <path
           d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-          fill="currentColor"></path>
+          fill="purple"
+        ></path>
+
       </svg>
     </h3>
     <p class="text-sm dark:opacity-80 mt-3 line-clamp-3 text-ellipsis">
@@ -49,18 +51,6 @@ const {
       ghLink && (
         <a target="_blank" rel="no-referrer" href={props.ghLink}>
           Github
-        </a>
-      )
-    } |
-    {
-      liveLink && (
-        <a
-          href={props.liveLink}
-          target="_blank"
-          rel="no-referrer"
-          class=" dark:text-rose-200 text-rose-800"
-        >
-          Live site
         </a>
       )
     }
