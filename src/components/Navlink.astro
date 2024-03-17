@@ -5,7 +5,7 @@ type Props = {
 };
 const { displayName, slug } = Astro.props;
 const path = new URL(Astro.request.url).pathname;
-let pathname: "blog" | "home" | "guestbook" | "projects" | "" = "";
+let pathname: "blog" | "home" | "projects" | "" = "";
 if (path === "/") pathname = "";
 else if (path.includes("/projects")) pathname = "projects";
 else pathname = "blog";

@@ -24,9 +24,9 @@ const allBlogPosts = (await getCollection("blog"))
 
 <BaseLayout
   title="Blog • Salma"
-  description="Not sure what I'll do here just yet"
+  description="Blog Posts!"
 >
-  <h1 class="text-2xl mb-6 mt-4 inline-block">Not sure what I'll do here yet..</h1>
+  <h1 class="text-2xl mb-6 mt-4 inline-block">Blog Posts!</h1>
   {
     allBlogPosts.map((post) => {
       return <BlogPreview {...post} />;

@@ -18,18 +18,21 @@ const latestPosts = allPosts
   .slice(0, 3);
 ---
 
+
+
 <BaseLayout
   title="Salma J"
-  description="I'm Salma! A sophomore in highschool with interests in computer science, mathematics, and linguistics. Thanks for visiting my website!!"
+  description="I'm Salma! A sophomore in high school with interests in computer science, mathematics, and linguistics. Thanks for visiting my website!!"
+>
 
   <header>
     <h1 class="tracking-tight mb-8 mt-3">Salma J.</h1>
-    <p class="sm:leading-9"> Welcome to my website !1!</p>
+    <p class="sm:leading-9"> Welcome to my website!</p>
     <p>
-I'm Salma, a highschool sophomore with interests in <strong>Computer science</strong>, <strong>Mathematics</strong>, <strong>Linguistics</strong>, and their intersections.
-I first started coding for fun in middle school, but have ever since been fascinated by the endless possibilities technology offers!
-<br /> <br />
-My current hobbies include Competitive Programming and solving Linguistics puzzles (like NACLO problems!). I'm also diving into the world of <strong> Data Science</strong>, and <strong> Machine Learning </strong> to hopefully incorporate more Math into my work.  </p>
+      I'm Salma, a 14-year-old highschool sophomore with interests in <strong>Computer science</strong>, <strong>Mathematics</strong>, <strong>Linguistics</strong>, and their intersections. I first started coding for fun in middle school, but have ever since been fascinated by the endless possibilities technology offers!
+      <br /><br />
+      My current hobbies include Competitive Programming and solving Linguistics puzzles (like NACLO problems!). I'm also diving into the world of <strong>Data Science</strong>, and <strong>Machine Learning</strong> to hopefully incorporate more Math into my work.
+    </p>
 
     <section class="social">
       <p>
@@ -42,12 +45,77 @@ My current hobbies include Competitive Programming and solving Linguistics puzzl
       </div>
     </section>
 
-    <Projects />
-    <hr class="border border-neutral-300 dark:border-neutral-700" />
-    <section>
-      <p>
-        I've also started writing blogs :D stay tuned for posts
+<section>
+    <style>
+      .float-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .float-child {
+        flex: 10%;
+        padding: 20px;
+      }
+    </style>
+
+
+<hr class="border border-neutral-300 dark:border-neutral-700 mb-5 mt-5" />
+
+          <h2>
+            Projects:
+          </h2>
+
+<div class="float-container">
+
+<div class="float-child">
+    <a href="https://github.com/ssszlma/TTT_Betting" target="_blank" rel="no-referrer" class="border-t no-underline bg-neutral-100/50 dark:bg-neutral-900/60 rounded-t flex flex-col items-start justify-between px-3 py-2 w-full my-2 group border-purple-500">
+      <h3 class="!text-base capitalize flex gap-1 items-center mt-1 w-full justify-between group-hover:text-purple-500 duration-200">TTT
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-45 text-gray-400 group-hover:text-purple-600">
+          <path d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z" fill="currentColor"></path>
+        </svg>
+      </h3>
+      <p class="text-sm dark:opacity-80 mt-3 line-clamp-3 text-ellipsis">
+       TTT is a crypto betting application built on Gear that utilizes smart contracts to finalize transactions and prize distribution.
       </p>
+    </a>
+</div>
+
+<div class="float-child">
+    <a href="https://github.com/ssszlma/skincheck" target="_blank" rel="no-referrer" class="border-t no-underline bg-neutral-100/50 dark:bg-neutral-900/60 rounded-t flex flex-col items-start justify-between px-3 py-2 w-full my-2 group border-purple-500">
+      <h3 class="!text-base capitalize flex gap-1 items-center mt-1 w-full justify-between group-hover:text-purple-500 duration-200">Skincheck
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-45 text-gray-400 group-hover:text-purple-600">
+          <path d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z" fill="currentColor"></path>
+        </svg>
+      </h3>
+      <p class="text-sm dark:opacity-80 mt-3 line-clamp-3 text-ellipsis">
+        SkinCheck is a skin disease detection app that uses image classification to identify skin diseases and provide information on them.
+      </p>
+    </a>
+</div>
+
+ <a
+        href="/projects"
+        class="text-sm no-underline justify-end gap-2 hover:underline flex w-full items-center pr-3 opacity-75"
+        >..more projects<svg
+          width="10"
+          height="10"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+            fill="currentColor"></path></svg
+        ></a
+      >
+</div>
+
+</section>
+
+<hr class="border border-neutral-300 dark:border-neutral-700 mt-4 mb-4" />
+    <section>
+      <h2>
+      Posts:
+      </h2>
       {
         latestPosts.map((post) => (
           <SmallBlogPreview
