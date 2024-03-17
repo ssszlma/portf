@@ -3,7 +3,8 @@ type Props = {
   displayName: string;
   slug: string;
 };
-const { displayName, slug } = Astro.props;
+const { displayName } = Astro.props;
+const { slug } = Astro.props;
 const path = new URL(Astro.request.url).pathname;
 let pathname: "blog" | "home" | "projects" | "" = "";
 if (path === "/") pathname = "";
