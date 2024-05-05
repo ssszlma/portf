@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bircolage: ["bircolage", "system-ui", "sans-serif"],
+        bircolage: ["bircolage", "system-ui", "open-sans"],
         graphik: ["graphik", "system-ui"]
       },
       backgroundImage: {

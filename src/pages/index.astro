@@ -22,30 +22,33 @@ const latestPosts = allPosts
 
 <BaseLayout
   title="Salma J"
-  description="I'm Salma! A sophomore in high school with interests in computer science, mathematics, and linguistics. Thanks for visiting my website!!"
+  description=""
 >
 
-  <header>
-    <h1 class="tracking-tight mb-8 mt-3">Salma J.</h1>
-    <p class="sm:leading-9"> Welcome to my website!</p>
-    <p>
-      I'm Salma, a 14-year-old highschool sophomore with interests in <strong>Computer science</strong>, <strong>Mathematics</strong>, <strong>Linguistics</strong>, and their intersections. I first started coding for fun in middle school, but have ever since been fascinated by the endless possibilities technology offers!
-      <br /><br />
-      My current hobbies include Competitive Programming and solving Linguistics puzzles (like NACLO problems!). I'm also diving into the worlds of <strong>Data Science</strong>, and <strong>Machine Learning</strong> to hopefully incorporate more Math into my work.
-    </p>
+<header>
+<h1 class="tracking-tight mb-0 mt-0" style="margin-bottom: -23px; margin-top: -25px;">Salma J.</h1>
 
-    <section class="social">
-      <p>
-        You can <strong>connect</strong> with me here:
-      </p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-4">
-        <SocialChip socialMedia="insta" />
-        <SocialChip socialMedia="linkedin" />
-        <SocialChip socialMedia="github" />
-      </div>
-    </section>
+<p style="display: inline-block; vertical-align: top; margin: 0; padding: 0; margin-top: -15px;" class="mb-0 mt-0">
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Open+Sans&weight=300&size=16&duration=3000&pause=100&color=F7F7F7&random=false&width=435&lines=Highschool+Sophomore;Software+Developer;Competitive+Programmer" alt="Typing SVG" /></a><p class="sm:leading-9 mb-0 mt-0" style="margin-top: -30px;">
+Welcome to my website!
+</p>
+
+<p class="sm:leading-9 mb-0 mt-0" style="margin-top: 5px;">
+I'm Salma, a highschool sophomore with interests in <strong>Computer science</strong>, <strong>Mathematics</strong>, and their intersections.
+I first started coding for fun in middle school, but have ever since been fascinated by the endless possibilities technology offers!
+</p>
+
+<p class="sm:leading-9 mb-0 mt-0" style="margin-top: 5px;">
+I'm currently working on a few projects and also actively improving my Competitive Programming skills.
+</p>
+
+
+
 
 <section>
+
+<!-- Makes there be a space between the two projects lul -->
     <style>
       .float-container {
         display: flex;
@@ -80,7 +83,7 @@ const latestPosts = allPosts
     </a>
 </div>
 
-<div class="float-child">
+<div class="float-child" >
     <a href="https://github.com/ssszlma/skincheck" target="_blank" rel="no-referrer" class="border-t no-underline bg-neutral-100/50 dark:bg-neutral-900/60 rounded-t flex flex-col items-start justify-between px-3 py-2 w-full my-2 group border-purple-500">
       <h3 class="!text-base capitalize flex gap-1 items-center mt-1 w-full justify-between group-hover:text-purple-500 duration-200">Skincheck
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-45 text-gray-400 group-hover:text-purple-600">
@@ -111,10 +114,11 @@ const latestPosts = allPosts
 
 </section>
 
-<hr class="border border-neutral-300 dark:border-neutral-700 mt-4 mb-4" />
-    <section>
+<hr class="border border-neutral-300 dark:border-neutral-700 mt-4 mb-0"  />
+
+    <section style="margin-bottom: -10px;">
       <h2>
-      Posts:
+        Posts:
       </h2>
       {
         latestPosts.map((post) => (
